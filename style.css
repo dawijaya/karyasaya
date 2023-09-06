@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    color: #333;
+}
+
+.karya {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.karya img {
+    max-width: 45%;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.kategori {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Animasi latar belakang kota */
+
+.cityscape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    animation: animCityscape 20s linear infinite;
+    background-size: 100% auto;
+    background-image: url('https://example.com/kota.jpg');
+    /* Ganti URL dengan gambar kota Anda */
+}
+
+@keyframes animCityscape {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
