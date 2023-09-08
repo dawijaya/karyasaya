@@ -4,40 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foto Karya Saya</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Galeri Karya</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            /* Menggunakan gambar galaksi sebagai latar belakang */
+            background-image: url('bimasakti.jpg');
+            /* Properti background berikut akan membuat gambar latar bergerak */
+            background-size: cover;
+            background-position: center;
+            animation: moveBackground 50s linear infinite;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        .gallery-item {
+            width: 200px;
+            margin: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.1);
+            background-color: #333;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        
+        @keyframes moveBackground {
+            0% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: -100% 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Galeri Karya Saya</h1>
     <div class="container">
-        <h1>Karya Saya</h1>
-
-        <div class="kategori">Desain Grafis</div>
-        <div class="karya">
-            <img src="SURAT PEMILIHAN OSIS.png" alt="Desain Grafis 1">
-            <img src="kotak suara 2.jpg" alt="Desain Grafis 2">
+        <div class="gallery-item">
+            <img src="12.jpg" alt="Karya 1">
         </div>
-
-        <div class="kategori">Ruang Konseling</div>
-        <div class="karya">
-            <img src="13.jpg" alt="Ruang Konseling 1">
-            <img src="14.jpg" alt="Ruang Konseling 2">
+        <div class="gallery-item">
+            <img src="13.jpg" alt="Karya 2">
         </div>
-
-        <div class="kategori">Website Labura</div>
-        <div class="karya">
-            <img src="12.jpg" alt="Website Labura 1">
-            <img src="16.jpg" alt="Website Labura 2">
+        <div class="gallery-item">
+            <img src="14.jpg" alt="Karya 3">
         </div>
-
-        <div class="kategori">Karya Lainnya</div>
-        <div class="karya">
-            <img src="gym.jpg" alt="Karya Lainnya 1">
-            <img src="FARHAN.jpg" alt="Karya Lainnya 2">
+        <div class="gallery-item">
+            <img src="16.jpg" alt="Karya 4">
         </div>
-
-        <!-- Animasi latar belakang kota -->
-        <div class="cityscape"></div>
+        <div class="gallery-item">
+            <img src="SURAT PEMILIHAN OSIS.png" alt="Karya 5">
+        </div>
+        <div class="gallery-item">
+            <img src="kotak suara 2.jpg" alt="Karya 6">
+        </div>
+        <div class="gallery-item">
+            <img src="gym.jpg" alt="Karya 7">
+        </div>
+        <div class="gallery-item">
+            <img src="FARHAN.jpg" alt="Karya 8">
+        </div>
     </div>
 </body>
 
